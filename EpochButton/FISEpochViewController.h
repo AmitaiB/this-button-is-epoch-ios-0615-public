@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface FISEpochViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *epochLabel;
+
 - (IBAction)epochButton:(id)sender;
+- (double)epochMethod;
+
 
 @end

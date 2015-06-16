@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//    self.epochLabel.hidden = NO;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,5 +36,12 @@
 */
 
 - (IBAction)epochButton:(id)sender {
+    self.epochLabel.text = [NSString stringWithFormat:@"%f", [self epochMethod]];
 }
+
+
+-(double)epochMethod {
+    return [[NSDate date] timeIntervalSince1970];
+}
+
 @end
